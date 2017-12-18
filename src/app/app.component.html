@@ -1,0 +1,23 @@
+
+<div class="row container">
+  <form [formGroup]="myForm">
+    <label>Start Date Time:</label> <input type="datetime-local" formControlName="startDate" class="form-control">
+    <label>End Date Time:</label> <input type="datetime-local" formControlName="endDate" class="form-control">
+  </form>
+  <label class="has-error" [hidden]="dateError">Please Select The Date</label>
+</div>
+
+<input type="button" value="Get Initial Data" (click)="onsubmit()">
+<input type="button" value="Draw Graph" (click)="startStreaming()">
+
+
+
+<div align="center">
+  <h2>Graph</h2>
+
+  <canvas #myCanvas width="600" height="1000" style="background:lightgray;"></canvas>
+
+</div>
+
+
+
